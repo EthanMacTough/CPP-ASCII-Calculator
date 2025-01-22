@@ -7,6 +7,8 @@ Code is organized into header files and is documented with comments.
 
 This program makes use of Microsoft's [conio.h](https://learn.microsoft.com/en-us/cpp/c-runtime-library/console-and-port-i-o?view=msvc-170&redirectedfrom=MSDN) library to take keyboard input without printing it to the terminal (credit to Erik Anderson on [Stack Overflow](https://stackoverflow.com/questions/24708700/c-detect-when-user-presses-arrow-key)). It is therefore unable to function on any non-Microsoft OS devices.
 
+Because of the nature of output in the code, messy text can be fixed by resizing the window to fit the entire calculator and pressing the CLEAR button in the botton right corner.
+
 This C++ project has two main moving parts: an adjacency list of buttons that can be pressed, and the calculator that keeps track of the numbers and operations that are given to it. All printing is done through the output.h file, which uses [ANSI Escape Codes](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) extensively.
 ## Button Adjacency List
 As seen in the image above, the OFF button is highlighted in red, while the rest of the calculator is white. This is all kept track of in the buttons.h header file, which keeps an adjacency list of button objects. 
